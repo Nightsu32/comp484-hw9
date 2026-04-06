@@ -62,15 +62,18 @@ let taxRate = 0.0825;
 let shippingCost = 5.0;
 
 let subtotal = itemPrice;
-let taxAmount = subtotal * taxRate;
-let totalCost = subtotal + taxAmount + shippingCost;
+let taxAmount = subtotal * taxRate; // multiplication
+let totalCost = subtotal + taxAmount + shippingCost; // addition
+let discountedPrice = subtotal - 10; // subtraction (NEW)
 
 let formattedTax = taxAmount.toFixed(2);
 let formattedTotal = totalCost.toFixed(2);
+let formattedDiscount = discountedPrice.toFixed(2);
 
 let mathResults =
   "Item Price: $" + itemPrice + "<br>" +
-  "Tax: $" + formattedTax + "<br>" +
+  "Discounted Price (−$10): $" + formattedDiscount + "<br>" +
+  "Tax (8.25%): $" + formattedTax + "<br>" +
   "Shipping: $" + shippingCost + "<br><br>" +
   "<strong>Total Cost: $" + formattedTotal + "</strong>";
 
